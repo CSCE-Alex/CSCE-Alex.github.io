@@ -8,7 +8,7 @@ body {
 #content {
     background-color: rgba(255, 255, 255, 0.8);
     width: 70%;
-    margin: auto;     /* centers the content on the page */
+    margin: auto;     
     border-radius: 5px;
     border: 2px solid rgba(255, 255, 255, 0.8);
     box-shadow: 5px 5px 5px rgb(129, 129, 47);
