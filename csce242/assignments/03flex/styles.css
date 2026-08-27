@@ -1,0 +1,166 @@
+/* Structure */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #dbe6f0;
+    margin: 0;
+    padding: 20px 0;
+}
+
+#content {
+    width: 85%;
+    max-width: 1000px;
+    margin: auto;
+    background-color: #eef4f8;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+#main-header {
+    background-color: #eef4f8;
+    padding: 10px 0;
+}
+
+#main-footer {
+    background-color: #4682b4;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    margin-top: 15px;
+}
+
+/* Navigation */
+#main-nav ul, #quick-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#main-nav ul {
+    display: flex;
+    flex-direction: column;
+}
+
+#main-nav li {
+    background-color: #4682b4;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #eef4f8;
+}
+
+#main-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Flex Layout Elements */
+.row {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.col-sidebar {
+    background-color: #bbd2ec;
+    padding: 15px;
+    text-align: center;
+}
+
+.col-sidebar h2 {
+    color: #2c4d6f;
+    margin-top: 0;
+}
+
+#quick-links li {
+    background: white;
+    margin: 4px 0;
+    border: 1px solid #bbd2ec;
+}
+
+#quick-links a {
+    color: #4682b4;
+    text-decoration: none;
+    display: block;
+    padding: 6px;
+}
+
+.col-card {
+    background-color: #b0c4de;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.col-card h3 {
+    background-color: #2c4d6f;
+    color: white;
+    margin: 0;
+    padding: 8px;
+    font-size: 1rem;
+}
+
+.col-side-img {
+    background-color: #b0c4de;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col-main-text {
+    background-color: #2c4d6f;
+    color: white;
+    padding: 20px;
+}
+
+.col-main-text h2 {
+    margin-top: 0;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Typography */
+#main-header h1 {
+    text-align: center;
+    color: #2c4d6f;
+    font-size: 2.2rem;
+    margin: 10px 0;
+}
+
+/* Responsive Design */
+@media (min-width: 800px) {
+    #main-nav ul {
+        flex-direction: row;
+    }
+
+    #main-nav li {
+        flex: 1;
+        border-bottom: none;
+        border-right: 1px solid #eef4f8;
+    }
+
+    #main-nav li:last-child {
+        border-right: none;
+    }
+
+    .row {
+        flex-direction: row;
+    }
+
+    .layout-top .col {
+        flex: 1;
+    }
+
+    .layout-middle .col-side-img {
+        flex: 1;
+    }
+
+    .layout-middle .col-main-text {
+        flex: 2;
+    }
+}

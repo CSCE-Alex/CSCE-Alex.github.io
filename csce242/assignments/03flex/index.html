@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>CSCE 242 Flex Layout</title> 
+    <link rel="stylesheet" href="styles.css">
+</head>
+    <body>
+    <div id="content">
+        <header id="main-header">
+            <h1>CSCE 242 Flex Layout</h1>
+        </header>
+
+        <nav id="main-nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Staff</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+            
+        <div class="row layout-top"> 
+            <aside id="sidebar" class="col col-sidebar"> 
+                <h2>Sidebar</h2>
+                <ul id="quick-links">
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                    <li><a href="#">Link 4</a></li>
+                </ul>
+            </aside>
+
+            <section class="col col-card">
+                <h3>Title 1</h3>
+                <img src="https://dummyimage.com/500x400/9eb6b0/ffffff&text=500+x+400" alt="500x400 Placeholder">
+            </section>
+
+            <section class="col col-card">
+                <h3>Title 2</h3>
+                <img src="https://dummyimage.com/500x400/9eb6b0/ffffff&text=500+x+400" alt="500x400 Placeholder">
+            </section>
+
+            <section class="col col-card">
+                <h3>Title 3</h3>
+                <img src="https://dummyimage.com/500x400/9eb6b0/ffffff&text=500+x+400" alt="500x400 Placeholder">
+            </section>
+        </div>
+
+        <div class="row layout-middle">
+            <aside class="col col-side-img">
+                <img src="https://dummyimage.com/300x300/9eb6b0/ffffff&text=300+x+300" alt="300x300 Placeholder">
+            </aside>
+            <article class="col col-main-text">
+                <h2>Idea 1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </article>
+            <aside class="col col-side-img">
+                <img src="https://dummyimage.com/300x300/9eb6b0/ffffff&text=300+x+300" alt="300x300 Placeholder">
+            </aside>
+        </div>
+
+        <div class="row layout-middle">
+            <aside class="col col-side-img">
+                <img src="https://dummyimage.com/300x300/9eb6b0/ffffff&text=300+x+300" alt="300x300 Placeholder">
+            </aside>
+            <article class="col col-main-text">
+                <h2>Idea 2</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </article>
+            <aside class="col col-side-img">
+                <img src="https://dummyimage.com/300x300/9eb6b0/ffffff&text=300+x+300" alt="300x300 Placeholder">
+            </aside>
+        </div>
+
+        <footer id="main-footer">
+            <p>@copy alex perez</p>
+        </footer>
+    </div>
+</body>
+</html>
