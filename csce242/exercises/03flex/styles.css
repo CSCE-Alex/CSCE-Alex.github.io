@@ -13,6 +13,37 @@ body {
     background-color: bisque;
 }
 
+/* Hero */
+#hero {
+    position:relative;
+}
+
+#hero-description {
+    position: absolute;
+    top: 10px;
+    left: 5%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    font-size: 1.5em;
+}
+
+.hero-arrow {
+    position: absolute;
+    top:45%;
+    font-size: 8em;
+    color: white;
+    text-decoration: none;
+}
+
+#hero-arrow-right {
+    right: 10px;
+}
+
+#hero-arrow-left {
+    left: 10px;
+}
+
+
 #sidebar, #info {
     padding: 5px;
 }
@@ -27,7 +58,7 @@ body {
 
 
 /* Navigation */
-#main-nav ul, #quick-links {
+#main-nav ul, #quick-links, #login-nav ul {
     list-style-type: none;
     padding-left: 0;
 }
@@ -38,9 +69,30 @@ body {
     border-bottom: 1px solid white;
 }
 
-#main-nav a {
+#main-nav a, #login-nav a {
     color:darkslateblue;
     text-decoration: none;
+}
+
+/* Login Nav */
+#login-nav {
+    position: absolute;
+    right: 1%;
+    top: 1%;
+}
+
+#login-nav ul {
+    color: rgb(50, 79, 167);
+    font-size:1.5em;
+}
+
+#login-nav li {
+    display: inline-block;
+}
+
+#login-nav li:not(:last-child):not(:first-child)::after {
+    content: "|";
+    color:cornflowerblue;
 }
 
 /* Images */
