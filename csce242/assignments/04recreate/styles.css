@@ -5,6 +5,11 @@ body {
     margin: 0;
     padding: 0;
 }
+    #content {
+    background-color: #ffffff;
+    width: 100%;
+    margin: auto;
+}
 
 /* Header */
 #main-header {
@@ -13,6 +18,26 @@ body {
     position: relative;
     
 }
+#top-bar {
+    background-color: #570008;
+    padding: 5px 20px;
+}
+
+#utility-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+#utility-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.85em;
+}
+
 .header-top{
     display: flex;
     align-items: center;
@@ -22,6 +47,20 @@ body {
 
 #logo {
     max-height: 50px;
+}
+
+#logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#menu-btn {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: none;
 }
 
 #main-header h1{
@@ -189,6 +228,9 @@ main {
 }
 
 #main-nav ul {
+   list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
 }
@@ -206,12 +248,87 @@ main {
     font-weight: bold
 }
 
+/* Box Sections */
+.banner-section {
+    position: relative;
+    background-color: #f4f4f4; /* Subtle neutral block background replacing the image */
+    padding: 40px 20px;
+    min-height: 220px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.feature-box {
+    background-color: #73000a;
+    color: white;
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+}
+
+.feature-box h2 {
+    margin-top: 0;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.feature-box p {
+    font-size: 0.95em;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.btn-outline {
+    display: inline-block;
+    border: 2px solid white;
+    color: white;
+    padding: 10px 18px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.85em;
+    letter-spacing: 0.5px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+/* Testimonal Section */
+.testimonial-container {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.testimonial-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.testimonial-image img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.testimonial-text {
+    position: relative;
+    padding: 0 20px;
+}
+
+/* Card Grid Section */
 
 /* login nav */
 #login-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
     align-items: center;
-    gap: 8px
+    gap: 8px;
 
 }
 
@@ -280,7 +397,7 @@ img {
     #main-nav li:last-child {
         border-right: none;
     }
-    
+
     .columns {
         display:flex;
     }
