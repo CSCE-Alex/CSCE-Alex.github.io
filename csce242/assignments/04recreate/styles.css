@@ -13,14 +13,14 @@ body {
 
 /* Header */
 #main-header {
-    background-color: #73000a;
+    background-color: black;
     color: white;
     position: relative;
     
 }
 #top-bar {
-    background-color: #570008;
-    padding: 5px 20px;
+    background-color: black;
+    padding: 10px 20px;
 }
 
 #utility-links {
@@ -42,7 +42,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 20px
+    padding: 15px 20px;
+    flex-wrap: wrap;
 }
 
 #logo {
@@ -154,6 +155,7 @@ main {
     align-items: center;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding-bottom: 20px;
+    margin-bottom: 20px;
     flex-wrap: wrap;
 }
 
@@ -166,7 +168,14 @@ main {
     gap: 15px;
 }
 
+#footer-links .columns {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 #footer-social li {
+    margin-bottom: 8px;
     display: inline-block;
 }
 
@@ -207,8 +216,11 @@ main {
 
 /*Footer Copy */
 #footer-copy {
-    background:black;
-    color:white;
+   background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.85em;
 }
 
 #footer-copy a {
@@ -320,6 +332,41 @@ main {
 }
 
 /* Card Grid Section */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 25px;
+    padding: 50px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card h3 {
+    margin: 15px 0 10px 0;
+    font-size: 1.15em;
+}
+
+.card h3 a {
+    color: #73000a;
+    text-decoration: none;
+}
+
+.card h3 a:hover {
+    text-decoration: underline;
+}
+
+.card p {
+    font-size: 0.9em;
+    color: #555;
+    line-height: 1.4;
+    margin: 0;
+}
 
 /* login nav */
 #login-nav ul {
@@ -333,9 +380,7 @@ main {
 }
 
 #login-nav {
-    position:absolute;
-    top:1%;
-    right:1%;
+    position:static;
 }
 
 #login-nav a {
@@ -398,36 +443,30 @@ img {
         border-right: none;
     }
 
-    .columns {
-        display:flex;
+    /* Positioning for off-centered boxes */
+    .banner-section.align-right {
+        justify-content: flex-end;
+        padding-right: 10%;
     }
 
-    #main-nav li {
-        flex:1;
-        border:0;
+    .banner-section.align-left {
+        justify-content: flex-start;
+        padding-left: 10%;
     }
 
-    .one {
-        flex:1;
+    .testimonial-content {
+        flex-direction: row;
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #footer-links .columns {
+        flex-direction: row;
     }
 
     .two {
-        flex:2;
-    }
-
-    .three {
-        flex:3;
-    }
-
-    .four {
-        flex:4
-    }
-
-    .five {
-        flex:5;
-    }
-
-    .six {
-        flex:6;
+        flex: 1;
     }
 }
