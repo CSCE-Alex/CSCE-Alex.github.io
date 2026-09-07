@@ -214,6 +214,229 @@ main {
     text-decoration: none;
 }
 
+/* Footer Columns */
+.stay-connected-section {
+    background-color: #ececec;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.stay-connected-section h2 {
+    color: #73000a;
+    font-size: 3.2em;
+    font-weight: 800;
+    margin: 0 0 10px 0;
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+.stay-connected-section p {
+    color: #333;
+    font-size: 1.1em;
+    margin-bottom: 35px;
+}
+
+.stay-connected-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-dark-red {
+    background-color: #73000a;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 14px 28px;
+    font-weight: bold;
+    font-size: 0.9em;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background-color 0.2s ease;
+}
+
+.btn-dark-red:hover {
+    background-color: #570008;
+}
+
+.school-footer {
+    background-color: #f2f2f2;
+    padding: 40px 20px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.school-footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.school-brand h3 {
+    margin: 0 0 15px 0;
+    font-family: Georgia, serif;
+    font-size: 1.3em;
+}
+
+.school-brand h3 a {
+    color: #73000a;
+    text-decoration: none;
+}
+
+.brand-action-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-black {
+    background-color: #000000;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 18px;
+    font-size: 0.85em;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.school-socials {
+    display: flex;
+    gap: 12px;
+    font-size: 1.3em;
+}
+
+.school-socials a {
+    color: #73000a;
+    text-decoration: none;
+}
+
+.school-links {
+    display: flex;
+    gap: 40px;
+    border-left: 2px solid #ccc;
+    padding-left: 30px;
+}
+
+.link-col {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.link-col a {
+    color: #73000a;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.85em;
+}
+
+.school-address p {
+    margin: 0 0 4px 0;
+    font-size: 0.9em;
+    color: #333;
+}
+
+.school-address a {
+    color: #73000a;
+    text-decoration: underline;
+}
+
+#main-university-footer {
+    background-color: #73000a;
+    color: black;
+    padding: 40px 50px 60px 50px;
+}
+
+.univ-footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 25px;
+    margin-bottom: 30px;
+}
+
+.univ-socials {
+    display: flex;
+    gap: 15px;
+}
+
+.circle-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 38px;
+    height: 38px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.univ-footer-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-col h4 {
+    font-size: 0.9em;
+    letter-spacing: 0.5px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid black;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col li {
+    margin-bottom: 8px;
+}
+
+.footer-col a {
+    color: black;
+    text-decoration: none;
+    font-size: 0.82em;
+    font-weight: bold;
+}
+
+.footer-col a:hover {
+    text-decoration: underline;
+}
+
+.sub-cols {
+    display: flex;
+    gap: 30px;
+}
+
+.col-wide { flex: 3; }
+.col-medium { flex: 2; }
+.col-narrow { flex: 1; }
+
+@media (max-width: 900px) {
+    .school-footer-container,
+    .univ-footer-columns,
+    .sub-cols {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .school-links {
+        border-left: none;
+        padding-left: 0;
+    }
+}
+
 /*Footer Copy */
 #footer-copy {
    background-color: #000000;
