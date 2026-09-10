@@ -11,3 +11,8 @@ document.getElementById("link-style").onclick = (e) => {
     e.target.classList.add("cool-link");
 
 };
+
+// Ball Animation when button is clicked
+document.getElementById("btn-bounce").onclick = (e) => {
+    document.getElementById("ball").classList.toggle("bouncing-ball");
+};
