@@ -192,7 +192,42 @@ body {
     width: 0;
 }
 
+.speech-bubble::before {
+    content: '';
+    position: absolute;
+    bottom: -13px;
+    left: 19px;
+    border-width: 12px 10px 0 0;
+    border-style: solid;
+    border-color: var(--headings) transparent;
+    display: block;
+    width: 0;
+}
 
+/* Column 2: Beverage */
+.beverage-controls {
+    display: flex;
+    align-items: center;
+    font-size: 0.9em;
+    gap: 8px;
+    color: var(--headings);
+}
+
+.beverage-controls select {
+    padding: 4px 8px;
+    border: 1px solid var(--headings);
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.beverage-output {
+    margin-top: 20px;
+    font-weight: bold;
+    color: var(--accent-text);
+    font-size: 0.95em;
+    align-self: flex-start;
+}
 
 /* images */
 img {
