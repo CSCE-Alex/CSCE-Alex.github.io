@@ -229,6 +229,29 @@ body {
     align-self: flex-start;
 }
 
+/* Column 3: Stickers */
+
+.sticker-container {
+    position: relative;
+    display: inline-block;
+}
+
+.sticker-img {
+    width: 110px;
+    height: auto;
+    display: block;
+    cursor: pointer;
+}
+
+.emoji-sticker {
+    position: absolute;
+    top: 15px;
+    left: -12px;
+    font-size: 1.4rem;
+    user-select: none;
+    pointer-events: none;
+}
+
 /* images */
 img {
     max-width:100%;
