@@ -15,26 +15,26 @@ document.getElementById("btn-bounce").onclick = (e) => {
     document.getElementById("ball").classList.toggle("bouncing-ball");
 }
 
-//when the number of days is entered, show a message about the plant
+//when you change the number of days since you watered your plant
+//show a message and change the image
 document.getElementById("txt-num-days").onkeyup = (e) => {
     const numDays = parseInt(e.target.value);
     const pMessage = document.getElementById("p-plant-msg");
-    const imgPlant = document.getElementById("img-plant");
-    imgPlant.classList.remove("hidden");
+    const plantImage = document.getElementById("img-plant");
+    plantImage.classList.remove("hidden");
     
-    if (numDays <= 2) {
-        pMessage.innerHTML = `let your plant rest its only been ${numDays} day(s).`;
-        plantImage
-    } else if (numDays <= 5) {
-        pMessage.innerHTML = `time to water its been ${numDays} day(s).`;
-        plantImage
-    } else if (numDays <= 7) {
-        pMessage.innerHTML = `Your plant is wilting its been ${numDays} day(s).`;
-        plantimage
+    if(numDays <= 2){
+        pMessage.innerHTML = `Let your plant rest it's only been ${numDays} day(s).`;
+        plantImage.src="https://dummyimage.com/150x150/556B2F/fff&text=Happy+Plant";
+    } else if(numDays <= 5){
+        pMessage.innerHTML = `Time to water it's been ${numDays} days.`;
+        plantImage.src="https://dummyimage.com/150x150/BDB76B/fff&text=Thirsty";
+    } else if(numDays <= 7) {
+        pMessage.innerHTML = `Oh no your plant is wilting it's been ${numDays} days.`;
     } else {
-        pMessage.innerHTML = "Your plant is dead!";
+        pMessage.innerHTML = "Your plant is a gooner";
     }
-};
+}
 
 //counting
 let countInterval;
@@ -76,14 +76,23 @@ btnStop.onclick = () =>
 
 //date display
 setInterval(()=>{
-    constpDisplay = document.getElementById("date-display");
+    const pDisplay = document.getElementById("date-display");
     const today = new Date();
-    const month = today.getMonth();
-    const day = today.getDay();
+    const month = today.getMonth() + 1;
+    const day = today.getDate();
     const year = today.getFullYear();
     const seconds = today.getSeconds();
     const minutes = today.getMinutes();
     const hours = today.getHours();
-    pDisplay.innerHTML = `${hours}:${minutes}:${seconds}`;
-    pDisplay.innerHTML += ` ${month}/${day}/${year}`;
+    pDisplay.innerHTML = `${hours}:${minutes}:${seconds} ${month}/${day}/${year}`;
 }, 1000);
+
+//toggle the navigation
+document.querySelector("#toggle-nav").onclick = () => {
+    document.querySelector("#main-nav ul").classList.toggle("hide-small");
+}
+
+//record the doations/thermometor
+document.getElementById("btn-donation").onclick = () => {
+    const userDonation = parseInt(document)
+}
