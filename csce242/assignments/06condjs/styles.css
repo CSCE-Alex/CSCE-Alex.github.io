@@ -1,0 +1,45 @@
+/*Structure */
+:root {
+    --background: #f3f2e7;
+    --card-bg: #eef0df;
+    --headings: #4a7a8c;
+    --accent-text: #e08a8a;
+    --cards-border: #b9cdd0;
+    --light-text: #ffffff;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--background);
+    padding:0px;
+    margin:0px;
+}
+
+#content {
+    max-width: 600px;
+    margin: 40px;
+    background-color: var(--card-bg);
+    border-radius:4px;
+    text-align: center;
+    padding-bottom:20px;
+
+}
+
+/*Header */
+#main-header {
+    position: relative;
+    padding: 30px 20px 10px 20px;
+
+}
+
+#main-header h1 {
+    color: var(--headings);
+    font-size: 2.5em;
+    margin: 0 0 8px;
+
+}
+
+#subtitle {
+    color: var(--accent-text);
+    
+}
