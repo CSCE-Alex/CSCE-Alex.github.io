@@ -94,5 +94,10 @@ document.querySelector("#toggle-nav").onclick = () => {
 
 //record the doations/thermometor
 document.getElementById("btn-donation").onclick = () => {
-    const userDonation = parseInt(document)
+    const userDonation = parseInt(document.getElementById("txt-donation").value);
+    const donationP = document.getElementById("donation-message")
+    percent = userDonation / Goal * 100;
+
+    donationP.innerHTML = `You are ${percent.toFixed(1)}% to your`;
+    document.querySelector(":root").setProperty("--donation");
 }
