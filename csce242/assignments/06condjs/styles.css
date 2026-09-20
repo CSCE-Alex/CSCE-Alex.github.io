@@ -1,10 +1,10 @@
 /*Structure */
 :root {
-    --background: #f3f2e7;
-    --card-bg: #eef0df;
-    --headings: #4a7a8c;
-    --accent-text: #e08a8a;
-    --cards-border: #b9cdd0;
+    --background: #eef3ea;
+    --card-bg: #e2ece1;
+    --headings: #2f5233;
+    --accent-text: #6b9080;
+    --cards-border: #a7c4a0;
     --light-text: #ffffff;
 }
 
@@ -17,7 +17,7 @@ body {
 
 #content {
     max-width: 600px;
-    margin: 40px;
+    margin: 40px auto;
     background-color: var(--card-bg);
     border-radius:4px;
     text-align: center;
