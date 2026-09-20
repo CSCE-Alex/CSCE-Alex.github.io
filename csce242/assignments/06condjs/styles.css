@@ -41,5 +41,129 @@ body {
 
 #subtitle {
     color: var(--accent-text);
-    
+    font-size: 1.5em;
+    margin:0 0 15px;
+
+}
+
+/*Navigation */
+#main-nav ul {
+    list-style-type:none;
+    padding-left:0;
+    margin:0;
+    display:flex;
+    justify-content:center;
+}
+ 
+#main-nav li {
+    position:relative;
+}
+
+#main-nav li:not(:last-child)::after {
+    content:"|";
+    color:var(--headings);
+    margin:0 10px;
+}
+ 
+#main-nav a {
+    color:var(--headings);
+    text-decoration:none;
+    cursor:pointer;
+}
+ 
+#main-nav a:hover, #main-nav a.active {
+    color:var(--accent-text);
+    font-weight:bold;
+}
+ 
+#toggle-nav {
+    display:none;
+    color:var(--headings);
+    text-decoration:none;
+    font-size:1.2em;
+    cursor:pointer;
+}
+
+/*Content */
+#content-box > div {
+     border:1px solid var(--cards-border);
+    background-color:var(--light-text);
+    border-radius:4px;
+    margin:20px auto 0;
+    padding:20px;
+    width:90%;
+    max-width:480px;
+}
+
+#content-box h3 {
+    color:var(--headings);
+    margin-top:0;
+}
+ 
+#content-box input[type="number"] {
+    width:120px;
+    padding:6px 10px;
+    border:1px solid var(--headings);
+    border-radius:4px;
+    font-size:1em;
+    text-align:center;
+    color:var(--headings);
+}
+ 
+#content-box p {
+    color:var(--headings);
+    margin:15px 0 5px;
+}
+ /* Footer */
+#main-footer p {
+    color:var(--headings);
+    font-size:0.85em;
+    margin-top:20px;
+}
+ 
+/* Hiding */
+.hidden {
+    display:none;
+}
+ 
+.hide-small {
+    display:none;
+}
+ 
+/* Responsive Design */
+ 
+/* 600px or larger */
+@media (min-width:600px) {
+    .hide-small {
+        display:flex;
+    }
+ 
+    #toggle-nav {
+        display:none;
+    }
+}
+ 
+/* smaller than 600px */
+@media (max-width:599px) {
+    #main-header {
+        text-align:left;
+    }
+ 
+    #toggle-nav {
+        display:inline-block;
+    }
+ 
+    #main-nav ul {
+        flex-direction:column;
+        align-items:flex-start;
+    }
+ 
+    #main-nav li:not(:last-child)::after {
+        content:"";
+        margin:0;
+    }
+ 
+    #main-nav li {
+        margin-bottom:6px;
+    }
 }
