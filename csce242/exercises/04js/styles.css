@@ -132,6 +132,11 @@ body {
     margin: 0;
     padding: 18px;
 }
+.special {
+    background-color: skyblue;
+    
+}
+    
 
 /* images */
 img {

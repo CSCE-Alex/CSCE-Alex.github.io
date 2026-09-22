@@ -101,3 +101,4 @@ document.getElementById("btn-donation").onclick = () => {
     donationP.innerHTML = `You are ${percent.toFixed(1)}% to your`;
     document.querySelector(":root").setProperty("--donation");
 }
+
