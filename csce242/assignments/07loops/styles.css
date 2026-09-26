@@ -25,11 +25,7 @@ main {
     margin: 0 0 25px 0;
 }
 
-/* =============================================================
-   ROAD CANVAS & CSS ART
-   External Reference: Custom CSS Art for cars and road layout
-   ============================================================= */
-
+/* Road */
 #road-canvas {
     width: 100%;
     position: relative;
@@ -37,14 +33,13 @@ main {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* Bright green grass strips */
+/* grass */
 .grass {
     background-color: #72bf44;
     height: 65px;
     width: 100%;
 }
 
-/* Dark grey asphalt road */
 #road {
     position: relative;
     background-color: #383838;
@@ -53,7 +48,6 @@ main {
     overflow: hidden;
 }
 
-/* Solid white edge markings */
 .line-top {
     position: absolute;
     top: 0;
@@ -72,7 +66,6 @@ main {
     background-color: #ffffff;
 }
 
-/* Dashed yellow lane divider */
 .line-center {
     position: absolute;
     top: 50%;
@@ -83,7 +76,7 @@ main {
     transform: translateY(-50%);
 }
 
-/* --- CAR CSS ART --- */
+/*  Cars */
 .car {
     position: absolute;
     width: 50px;
@@ -92,7 +85,6 @@ main {
     box-sizing: border-box;
 }
 
-/* Car Roof & Light Blue Windshield */
 .car::before {
     content: '';
     position: absolute;
@@ -104,7 +96,6 @@ main {
     border-radius: 5px 5px 0 0;
 }
 
-/* Dual Wheels/Tires using CSS box-shadow */
 .car::after {
     content: '';
     position: absolute;
