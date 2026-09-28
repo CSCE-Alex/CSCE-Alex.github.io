@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Reservation & Contact Center - Carolina Auto Details</title>
+        <link rel="stylesheet" href="contact.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header id="site-header">
+            <div class="wrap header-inner">
+                <a href="index.html" id="logo">
+                    <i class="fa-solid fa-car-side"></i>
+                    <div class="logo-text">
+                        <span class="logo-name">CAROLINA <span class="accent">AUTO DETAILS</span></span>
+                        <span class="logo-tagline">Premium Vehicle Care</span>
+                    </div>
+                </a>
+
+                <a href="#" id="toggle-nav"><span id="toggle-arrow">&#9660;</span></a>
+
+                <nav id="main-nav">
+                    <ul class="hide-small">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html" class="active">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div id="header-actions" class="hide-small">
+                    <a href="tel:7045550199" id="header-phone"><i class="fa-solid fa-phone"></i> (704) 555-0199</a>
+                    <a href="contact.html" id="btn-book" class="btn btn-solid">Book Now</a>
+                </div>
+            </div>
+        </header>
+
+        <section id="contact-section">
+            <div class="wrap">
+                <span class="eyebrow">Secure Studio Slot</span>
+                <h1>Reservation &amp; <span class="accent">Contact Center</span></h1>
+                <p class="section-intro">Submit your vehicle credentials to configure your detailing run in our sterile Charlotte environment.</p>
+
+                <div class="contact-grid">
+                    <div class="booking-form-wrap">
+                        <h3>Automotive Specification Deposit</h3>
+                        <form id="booking-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>First &amp; Last Name *</label>
+                                    <input type="text" placeholder="Marcus Aurelius" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Email Address *</label>
+                                    <input type="email" placeholder="m.aurelius@luxurycare.com" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Phone Number *</label>
+                                    <input type="tel" placeholder="(704) 555-0102" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Preferred Studio Date *</label>
+                                    <input type="text" placeholder="Select Date (e.g., Oct 14)" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Vehicle Year / Make / Model *</label>
+                                    <input type="text" placeholder="2025 Porsche GT3 RS" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Detailing Package Tier *</label>
+                                    <select required>
+                                        <option value="essential">Essential Detail ($199)</option>
+                                        <option value="premium" selected>Premium Detail ($399)</option>
+                                        <option value="elite">Elite Detail ($799)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Special Instructions (Paint conditions, specific concerns)</label>
+                                <textarea rows="4" placeholder="Light micro-swirls visible on hood. Request extra premium leather hydration shield."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-solid">Submit Booking Request</button>
+                        </form>
+                    </div>
+
+                    <div class="contact-info-wrap">
+                        <h3>Contact Details &amp; HQ</h3>
+                        <div class="info-block">
+                            <h4>Charlotte Studio Address</h4>
+                            <p>812 Automotive Way, Suite 400<br>Charlotte, NC 28203</p>
+                        </div>
+                        <div class="info-block">
+                            <h4>Direct Line Support</h4>
+                            <p>(704) 555-0199 (Mon-Sat, 8am-7pm)</p>
+                        </div>
+                        <div class="info-block">
+                            <h4>Email Correspondence</h4>
+                            <p><a href="mailto:bookings@carolinadetails.com" class="accent">bookings@carolinadetails.com</a></p>
+                        </div>
+
+                        <div class="map-placeholder">
+                            <span>CHARLOTTE NC HQ LOCATION MAP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq-section">
+            <div class="wrap">
+                <span class="eyebrow">Common Inquiries</span>
+                <h2>Automotive Detailing FAQs</h2>
+                <p class="section-intro">Got questions before configuring your appointment? Read through our technical protocols below.</p>
+
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h4>How long does a paint correction run actually require?</h4>
+                        <p>Depending on clear coat hardness and depth of defect, multi-stage correction requires 24 to 48 hours of meticulously recorded polishing passes to eliminate swirls entirely.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>What is the key advantage of Gyeon Quartz Ceramic Coatings?</h4>
+                        <p>Gyeon Quartz chemical compounds bind directly to the clear coat at a molecular level, establishing a glass-like shell that guards against acid rain, UV oxidation, and paint etching.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Do you offer pick-up and delivery options?</h4>
+                        <p>Yes. We offer covered flatbed concierge vehicle transport across the greater Charlotte region for ultimate security and paint peace-of-mind.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer id="site-footer">
+            <div class="wrap footer-inner">
+                <div class="footer-col footer-brand">
+                    <a href="index.html" class="logo">
+                        <i class="fa-solid fa-car-side"></i>
+                        <span class="logo-name">CAROLINA <span class="accent">AUTO DETAILS</span></span>
+                    </a>
+                    <p>Preserving the prestige and investment of your fine vehicle through master-level automotive restoration, ceramic coatings, and premium detailing.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Pages</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Ceramic Coating</a></li>
+                        <li><a href="services.html">Paint Correction</a></li>
+                        <li><a href="services.html">Interior Restorations</a></li>
+                        <li><a href="services.html">Concierge Maintenance</a></li>
+                        <li><a href="services.html">Elite Detailing</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>HQ Location</h4>
+                    <p>812 Automotive Way, Suite 400<br>Charlotte, NC 28203</p>
+                    <a href="mailto:info@carolinadetails.com" class="accent">info@carolinadetails.com</a>
+                </div>
+            </div>
+
+            <div id="footer-bottom">
+                <p>&copy; 2026 Carolina Auto Details. All Rights Reserved. Built with uncompromising precision.</p>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>
