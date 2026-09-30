@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vacations</title>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div id="content">
+            <header id="main-header">
+                <h1>Vacations</h1>
+                <h2 id="subtitle">Vacation Experiences</h2>
+            </header>
+
+            <section id="gallery"></section>
+
+            <footer id="main-footer">
+                <p>@yourusername</p>
+            </footer>
+        </div>
+
+            <div class="w3-modal-content w3-animate-zoom" id="modal-content">
+                <span onclick="closeVacationModal()" class="w3-button w3-display-topright">&times;</span>
+
+                <div id="modal-map-col">
+                    <iframe id="modal-map" src="" loading="lazy" allowfullscreen></iframe>
+                </div>
+
+                <div id="modal-info-col">
+                    <h2 id="modal-title"></h2>
+                    <p><strong>Type:</strong> <span id="modal-type"></span></p>
+                    <p><strong>Description:</strong> <span id="modal-description"></span></p>
+                    <p><strong>Things To Do:</strong> <span id="modal-things"></span></p>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
