@@ -1,50 +1,50 @@
+/* Structure */
 :root {
-    --outer-bg: #f3f2e7;
-    --card-bg: #eef0df;
-    --headings: #4a7a8c;
-    --accent-text: #e08a8a;
-    --cards-border: #b9cdd0;
-    --card-header-bg: #4d6fa3;
+    --page-bg: #ffffff;
+    --card-bg: #f7ead9;
+    --headings: #a8501f;
+    --accent-text: #e2823f;
+    --cards-border: #e8c9a0;
+    --card-header-bg: #d9782c;
     --light-text: #ffffff;
-    --modal-bg: #dbe7f5;
-    --modal-heading: #35588c;
+    --modal-bg: #fbe4cf;
+    --modal-heading: #9a4415;
+    --body-text: #333333;
 }
- 
-* {
-    box-sizing: border-box;
-}
- 
+
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: var(--outer-bg);
-    padding: 0px;
-    margin: 0px;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 40px s20px;
+    color: #333333;
 }
- 
-/* Structure */
+
 #content {
     max-width: 1100px;
-    margin: 40px auto;
-    background-color: var(--card-bg);
+    margin: 0 auto;
+    background-color: #f7ead9;
     border-radius: 4px;
     text-align: center;
     padding: 30px 20px 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
- 
+
 /* Header */
 #main-header h1 {
-    color: var(--headings);
-    font-size: 2.3em;
-    margin: 0 0 8px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #a8501f;
+    margin: 0 0 8px 0;
 }
- 
+
 #subtitle {
-    color: var(--accent-text);
-    font-size: 1.4em;
-    margin: 0 0 30px;
-    font-weight: normal;
+    font-size: 22px;
+    font-weight: bold;
+    color: #e2823f;
+    margin: 0 0 30px 0;
 }
- 
+
 /* Gallery */
 #gallery {
     display: grid;
@@ -52,54 +52,55 @@ body {
     gap: 20px;
 }
 
-  .vacation-card {
-    background-color: var(--light-text);
-    border: 1px solid var(--cards-border);
+/* Card */
+.vacation-card {
+    background-color: #ffffff;
+    border: 1px solid #e8c9a0;
     border-radius: 4px;
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
- 
+
 .vacation-card:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
 }
- 
+
 .card-header {
-    background-color: var(--card-header-bg);
-    color: var(--light-text);
+    background-color: #d9782c;
+    color: #ffffff;
     padding: 12px 8px;
 }
- 
+
 .card-header h3 {
-    margin: 0 0 4px;
+    margin: 0 0 4px 0;
     font-size: 1.05em;
 }
- 
+
 .card-header p {
     margin: 0;
     font-size: 0.8em;
     opacity: 0.9;
 }
- 
+
 .vacation-card img {
     width: 100%;
     height: 160px;
     object-fit: cover;
     display: block;
 }
- 
+
 /* Footer */
 #main-footer p {
-    color: var(--headings);
+    color: #a8501f;
     font-size: 0.85em;
     margin-top: 30px;
 }
- 
+
 /* Modal */
 #modal-content {
-    background-color: var(--modal-bg);
+    background-color: #fbe4cf;
     max-width: 800px;
     display: flex;
     flex-direction: column;
@@ -108,59 +109,59 @@ body {
     border-radius: 6px;
     position: relative;
 }
- 
+
 #modal-map-col {
     flex: 1;
 }
- 
+
 #modal-map {
     width: 100%;
     height: 260px;
     border: 0;
     border-radius: 4px;
 }
- 
+
 #modal-info-col {
     flex: 1;
     text-align: left;
 }
- 
+
 #modal-info-col h2 {
-    color: var(--modal-heading);
-    margin: 0 0 14px;
+    color: #9a4415;
+    margin: 0 0 14px 0;
 }
- 
+
 #modal-info-col p {
-    color: #333;
-    margin: 0 0 12px;
+    color: #333333;
+    margin: 0 0 12px 0;
     line-height: 1.5;
 }
- 
+
 #modal-info-col strong {
-    color: var(--modal-heading);
+    color: #9a4415;
 }
- 
+
 #vacation-modal .w3-button {
     background-color: transparent;
-    color: var(--modal-heading);
+    color: #9a4415;
     font-size: 1.4em;
 }
- 
+
 /* Responsive Design */
- 
-/* Tablet: 3 then 2 columns */
+
+/* medium screen */
 @media (max-width: 900px) {
     #gallery {
         grid-template-columns: repeat(2, 1fr);
     }
 }
- 
-/* Mobile: 1 column, modal stacks */
+
+/* small screen */
 @media (max-width: 600px) {
     #gallery {
         grid-template-columns: 1fr;
     }
- 
+
     #modal-content {
         flex-direction: column;
         margin: 20px;
