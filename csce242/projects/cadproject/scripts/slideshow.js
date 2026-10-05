@@ -1,4 +1,4 @@
-// Nav Toggle 
+// Nav Toggle
 const toggleBtn = document.getElementById("toggle-nav");
 const mainNavUl = document.querySelector("#main-nav ul");
 const headerActions = document.getElementById("header-actions");
@@ -11,9 +11,9 @@ if (toggleBtn) {
     };
 }
 
-// Slideshow Helper Functions
+// Slideshow Helper
 const getCurrentSlide = () => {
-    return document.querySelector("#slides :not(.hidden)");
+    return document.querySelector("#slides .slide:not(.hidden)");
 };
 
 const slide = (currentSlide, nextSlide) => {
@@ -21,7 +21,7 @@ const slide = (currentSlide, nextSlide) => {
     nextSlide.classList.remove("hidden");
 };
 
-// Arrows
+// Arrows 
 const rightArrow = document.getElementById("hero-arrow-right");
 const leftArrow = document.getElementById("hero-arrow-left");
 
@@ -31,8 +31,12 @@ if (rightArrow) {
         const currentSlide = getCurrentSlide();
         let nextSlide = currentSlide.nextElementSibling;
 
+        while (nextSlide && !nextSlide.classList.contains("slide")) {
+            nextSlide = nextSlide.nextElementSibling;
+        }
+
         if (nextSlide == null) {
-            nextSlide = document.querySelector("#slides :first-child");
+            nextSlide = document.querySelector("#slides .slide:first-child");
         }
 
         slide(currentSlide, nextSlide);
@@ -45,8 +49,11 @@ if (leftArrow) {
         const currentSlide = getCurrentSlide();
         let nextSlide = currentSlide.previousElementSibling;
 
+        while (nextSlide && !nextSlide.classList.contains("slide")) {
+            nextSlide = nextSlide.previousElementSibling;
+        }
         if (nextSlide == null) {
-            nextSlide = document.querySelector("#slides :last-child");
+            nextSlide = document.querySelector("#slides .slide:last-child");
         }
 
         slide(currentSlide, nextSlide);
