@@ -1,27 +1,31 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Vacations</title>
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <div id="content">
-            <header id="main-header">
-                <h1>Vacations</h1>
-                <h2 id="subtitle">Vacation Experiences</h2>
-            </header>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vacations</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="content">
+        <header id="main-header">
+            <h1>Vacations</h1>
+            <h2 id="subtitle">Vacation Experiences</h2>
+        </header>
 
-            <section id="gallery"></section>
+        <section id="gallery"></section>
 
-            <footer id="main-footer">
-                <p>@alex perez</p>
-            </footer>
-        </div>
+        <footer id="main-footer">
+            <p>@alex perez</p>
+        </footer>
+    </div>
 
-            <div class="w3-modal-content w3-animate-zoom" id="modal-content">
-                <span onclick="closeVacationModal()" class="w3-button w3-display-topright">&times;</span>
-
+    <div id="vacation-modal" class="w3-modal">
+        <div class="w3-modal-content w3-animate-zoom" id="modal-content">
+            <span id="modal-close" class="w3-button w3-display-topright">&times;</span>
+            
+            <div id="modal-body-wrapper">
                 <div id="modal-map-col">
                     <iframe id="modal-map" src="" loading="lazy" allowfullscreen></iframe>
                 </div>
@@ -34,7 +38,8 @@
                 </div>
             </div>
         </div>
+    </div>
 
-        <script src="script.js"></script>
-    </body>
+    <script src="script.js"></script>
+</body>
 </html>
