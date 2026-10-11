@@ -1,0 +1,65 @@
+[
+  {
+    "_id": 1,
+    "name": "Mercedes-Benz Full Detail",
+    "category": "Interior & Exterior",
+    "price": 200,
+    "duration": "3.0 Hours",
+    "img_name": "images/Benz.png"
+  },
+  {
+    "_id": 2,
+    "name": "Aston Martin DBS Polish",
+    "category": "Exterior Polish",
+    "price": 250,
+    "duration": "2.5 Hours",
+    "img_name": "images/DBS.png"
+  },
+  {
+    "_id": 3,
+    "name": "Porsche GT3 RS Protection",
+    "category": "Paint Correction",
+    "price": 350,
+    "duration": "4.0 Hours",
+    "img_name": "images/gt3rsL.png"
+  },
+  {
+    "_id": 4,
+    "name": "BMW M3 Interior Care",
+    "category": "Interior Detail",
+    "price": 150,
+    "duration": "2.0 Hours",
+    "img_name": "images/M3.png"
+  },
+  {
+    "_id": 5,
+    "name": "Audi R8 Wash & Wax",
+    "category": "Express Clean",
+    "price": 180,
+    "duration": "2.0 Hours",
+    "img_name": "images/R8.png"
+  },
+  {
+    "_id": 6,
+    "name": "Lamborghini SVJ Ceramic",
+    "category": "Ceramic Coating",
+    "price": 500,
+    "duration": "5.0 Hours",
+    "img_name": "images/SVJ.png"
+  },
+  {
+    "_id": 7,
+    "name": "mustang cleaned",
+    "category": "Wash & Wax",
+    "price": 120,
+    "duration": "1.5 Hours",
+    "img_name": "images/mustang.png"
+  },
+  {
+    "_id": 8,
+    "name": "F-150 Detail",
+    "category": "Wheel Care",
+    "price": 130,
+    "duration": "1.5 Hours",
+    "img_name": "images/f-150.png"
+]
