@@ -1,17 +1,16 @@
-// GitHub Page 
-const JSON_URL = "https://CSCE-Alex.github.io/csce242/projects/part7/data/services.json";
+//parsing 
+const JSON_URL = "https://csce-alex.github.io/csce242/projects/part7/data/services.json";
 
-// parse json
 const loadJSONServices = async () => {
   const container = document.getElementById("services-container");
-  if (!container) return;
+  if (!container) return; // not on the services page
 
   try {
     const response = await fetch(JSON_URL);
     if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
 
     const services = await response.json();
-    container.innerHTML = ""; 
+    container.innerHTML = "";
 
     services.forEach((service) => {
       const card = document.createElement("div");
@@ -35,10 +34,18 @@ const loadJSONServices = async () => {
 };
 
 // contact form
+const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+const showFeedback = (feedback, type, message) => {
+  feedback.classList.remove("hidden", "success", "error", "sending");
+  feedback.classList.add(type);
+  feedback.textContent = message;
+};
+
 const initContactForm = () => {
   const form = document.getElementById("contact-form");
   const feedback = document.getElementById("form-feedback");
-  if (!form || !feedback) return;
+  if (!form || !feedback) return; // not on the contact page
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -48,40 +55,41 @@ const initContactForm = () => {
       return;
     }
 
+    const submitBtn = form.querySelector('button[type="submit"]');
+    if (submitBtn) submitBtn.disabled = true;
+
+    showFeedback(feedback, "sending", "Sending your request...");
+
     const formData = new FormData(form);
     const jsonBody = JSON.stringify(Object.fromEntries(formData));
 
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Accept": "application/json"
-        },
-        body: jsonBody
-      });
+      
+      const [response] = await Promise.all([
+        fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+          },
+          body: jsonBody
+        }),
+        wait(1000)
+      ]);
 
       const result = await response.json();
 
-      setTimeout(() => {
-        feedback.classList.remove("hidden", "success", "error");
-
-        if (response.status === 200) {
-          feedback.classList.add("success");
-          feedback.textContent = "Thank you! Your quote request has been sent successfully.";
-          form.reset();
-        } else {
-          feedback.classList.add("error");
-          feedback.textContent = result.message || "An error occurred while submitting.";
-        }
-      }, 1000);
-
+      if (response.ok && result.success !== false) {
+        showFeedback(feedback, "success", "Thank you! Your quote request has been sent successfully.");
+        form.reset();
+      } else {
+        showFeedback(feedback, "error", result.message || "An error occurred while submitting.");
+      }
     } catch (err) {
-      setTimeout(() => {
-        feedback.classList.remove("hidden", "success", "error");
-        feedback.classList.add("error");
-        feedback.textContent = "Network error. Please try again later.";
-      }, 1000);
+      await wait(1000);
+      showFeedback(feedback, "error", "Network error. Please try again later.");
+    } finally {
+      if (submitBtn) submitBtn.disabled = false;
     }
   });
 };
