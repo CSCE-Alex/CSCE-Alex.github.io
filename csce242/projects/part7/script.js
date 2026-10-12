@@ -1,7 +1,7 @@
-// GitHub Page
+// GitHub Page 
 const JSON_URL = "https://CSCE-Alex.github.io/csce242/projects/part7/data/services.json";
 
-// Services
+// parse json
 const loadJSONServices = async () => {
   const container = document.getElementById("services-container");
   if (!container) return;
@@ -11,7 +11,7 @@ const loadJSONServices = async () => {
     if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
 
     const services = await response.json();
-    container.innerHTML = ""; // Clear loading placeholder text
+    container.innerHTML = ""; 
 
     services.forEach((service) => {
       const card = document.createElement("div");
@@ -34,7 +34,8 @@ const loadJSONServices = async () => {
   }
 };
 
-// contact
+// contact form
+const initContactForm = () => {
   const form = document.getElementById("contact-form");
   const feedback = document.getElementById("form-feedback");
   if (!form || !feedback) return;
@@ -85,7 +86,6 @@ const loadJSONServices = async () => {
   });
 };
 
-// Run functions
 document.addEventListener("DOMContentLoaded", () => {
   loadJSONServices();
   initContactForm();

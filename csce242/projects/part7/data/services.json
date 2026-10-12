@@ -17,6 +17,14 @@
   },
   {
     "_id": 3,
+    "name": "Ford F-150 Truck Restoration",
+    "category": "Full Clean",
+    "price": 220,
+    "duration": "3.5 Hours",
+    "img_name": "images/f-150.jpg"
+  },
+  {
+    "_id": 4,
     "name": "Porsche GT3 RS Protection",
     "category": "Paint Correction",
     "price": 350,
@@ -24,7 +32,7 @@
     "img_name": "images/gt3rsL.png"
   },
   {
-    "_id": 4,
+    "_id": 5,
     "name": "BMW M3 Interior Care",
     "category": "Interior Detail",
     "price": 150,
@@ -32,34 +40,27 @@
     "img_name": "images/M3.png"
   },
   {
-    "_id": 5,
-    "name": "Audi R8 Wash & Wax",
-    "category": "Express Clean",
+    "_id": 6,
+    "name": "Ford Mustang Polish & Wax",
+    "category": "Exterior Care",
+    "price": 175,
+    "duration": "2.0 Hours",
+    "img_name": "images/mustang.jpg"
+  },
+  {
+    "_id": 7,
+    "name": "Audi R8 Express Clean",
+    "category": "Express Detail",
     "price": 180,
     "duration": "2.0 Hours",
     "img_name": "images/R8.png"
   },
   {
-    "_id": 6,
+    "_id": 8,
     "name": "Lamborghini SVJ Ceramic",
     "category": "Ceramic Coating",
     "price": 500,
     "duration": "5.0 Hours",
     "img_name": "images/SVJ.png"
-  },
-  {
-    "_id": 7,
-    "name": "mustang cleaned",
-    "category": "Wash & Wax",
-    "price": 120,
-    "duration": "1.5 Hours",
-    "img_name": "images/mustang.png"
-  },
-  {
-    "_id": 8,
-    "name": "F-150 Detail",
-    "category": "Wheel Care",
-    "price": 130,
-    "duration": "1.5 Hours",
-    "img_name": "images/f-150.png"
+  }
 ]
