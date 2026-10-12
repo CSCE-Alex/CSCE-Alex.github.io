@@ -1,7 +1,8 @@
+// GitHub Page
 const JSON_URL = "https://CSCE-Alex.github.io/csce242/projects/part7/data/services.json";
 
-//Parson Json
-const fetchServices = async () => {
+// Services
+const loadJSONServices = async () => {
   const container = document.getElementById("services-container");
   if (!container) return;
 
@@ -10,7 +11,7 @@ const fetchServices = async () => {
     if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
 
     const services = await response.json();
-    container.innerHTML = ""; // Clear loading placeholder
+    container.innerHTML = ""; // Clear loading placeholder text
 
     services.forEach((service) => {
       const card = document.createElement("div");
@@ -28,13 +29,12 @@ const fetchServices = async () => {
       container.appendChild(card);
     });
   } catch (error) {
-    console.error("JSON fetch error:", error);
-    container.innerHTML = `<p style="color: #ff4d4d;">Failed to load services. Ensure GitHub Pages URL is published.</p>`;
+    console.error("Error loading JSON:", error);
+    container.innerHTML = `<p style="color: #ff4d4d;">Failed to load services from JSON.</p>`;
   }
 };
 
-//Contact 
-const setupContactForm = () => {
+// contact
   const form = document.getElementById("contact-form");
   const feedback = document.getElementById("form-feedback");
   if (!form || !feedback) return;
@@ -85,7 +85,8 @@ const setupContactForm = () => {
   });
 };
 
+// Run functions
 document.addEventListener("DOMContentLoaded", () => {
-  fetchServices();
-  setupContactForm();
+  loadJSONServices();
+  initContactForm();
 });
