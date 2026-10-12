@@ -47,36 +47,39 @@
                     <div class="booking-form-wrap">
                         <h3>Automotive Specification Deposit</h3>
                         <form id="booking-form">
+    
+                            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+
                             <div class="form-row">
                                 <div class="form-group">
                                     <label>First &amp; Last Name *</label>
-                                    <input type="text" placeholder="Alex Perez" required>
+                                    <input type="text" name="name" placeholder="Alex Perez" required>
                                 </div>
                                 <div class="form-group">
                                     <label>Email Address *</label>
-                                    <input type="email" placeholder="Alex.Perez@luxurycare.com" required>
+                                    <input type="email" name="email" placeholder="Alex.Perez@luxurycare.com" required>
                                 </div>
                             </div>
 
                             <div class="form-row">
                                 <div class="form-group">
                                     <label>Phone Number *</label>
-                                    <input type="tel" placeholder="(704) 555-0102" required>
+                                    <input type="tel" name="phone" placeholder="(704) 555-0102" required>
                                 </div>
                                 <div class="form-group">
                                     <label>Preferred Studio Date *</label>
-                                    <input type="text" placeholder="Select Date (e.g., Oct 14)" required>
+                                    <input type="text" name="date" placeholder="Select Date (e.g., Oct 14)" required>
                                 </div>
                             </div>
 
                             <div class="form-row">
                                 <div class="form-group">
                                     <label>Vehicle Year / Make / Model *</label>
-                                    <input type="text" placeholder="2008 Nissan Titan" required>
+                                    <input type="text" name="vehicle" placeholder="2008 Nissan Titan" required>
                                 </div>
                                 <div class="form-group">
                                     <label>Detailing Package Tier *</label>
-                                    <select required>
+                                    <select name="package" required>
                                         <option value="essential">Essential Detail ($99)</option>
                                         <option value="premium" selected>Premium Detail ($199)</option>
                                         <option value="elite">Elite Detail ($399)</option>
@@ -86,10 +89,12 @@
 
                             <div class="form-group">
                                 <label>Special Instructions (Paint conditions, specific concerns)</label>
-                                <textarea rows="4" placeholder="Light micro-swirls visible on hood. Request extra premium leather hydration shield."></textarea>
+                                <textarea name="message" rows="4" placeholder="Light micro-swirls visible on hood. Request extra premium leather hydration shield."></textarea>
                             </div>
 
                             <button type="submit" class="btn btn-solid">Submit Booking Request</button>
+
+                            <p id="result" style="margin-top: 15px; font-weight: 600; font-size: 0.95rem;"></p>
                         </form>
                     </div>
 
@@ -183,6 +188,6 @@
             </div>
         </footer>
 
-        <script src="script.js"></script>
+        <script src="intro.js"></script>
     </body>
 </html>
